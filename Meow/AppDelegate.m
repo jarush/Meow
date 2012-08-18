@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MeowViewController.h"
 
 @implementation AppDelegate
 
@@ -19,9 +20,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+    self.window.rootViewController = [[[MeowViewController alloc] init] autorelease];
+
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

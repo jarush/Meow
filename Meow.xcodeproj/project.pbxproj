@@ -13,6 +13,10 @@
 		6861696F15DEAE4900B42C67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6861696D15DEAE4900B42C67 /* InfoPlist.strings */; };
 		6861697115DEAE4900B42C67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6861697015DEAE4900B42C67 /* main.m */; };
 		6861697515DEAE4900B42C67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6861697415DEAE4900B42C67 /* AppDelegate.m */; };
+		6861699115DEB0B900B42C67 /* MeowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6861699015DEB05E00B42C67 /* MeowViewController.m */; };
+		6861699515DEB42400B42C67 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861699415DEB42400B42C67 /* AudioToolbox.framework */; };
+		6861699715DEB59200B42C67 /* meow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6861699615DEB59200B42C67 /* meow.wav */; };
+		6861699B15DEB72800B42C67 /* meow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6861699A15DEB72800B42C67 /* meow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		6861697215DEAE4900B42C67 /* Meow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meow-Prefix.pch"; sourceTree = "<group>"; };
 		6861697315DEAE4900B42C67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6861697415DEAE4900B42C67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6861698F15DEB05E00B42C67 /* MeowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeowViewController.h; sourceTree = "<group>"; };
+		6861699015DEB05E00B42C67 /* MeowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeowViewController.m; sourceTree = "<group>"; };
+		6861699415DEB42400B42C67 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6861699615DEB59200B42C67 /* meow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = meow.wav; sourceTree = "<group>"; };
+		6861699A15DEB72800B42C67 /* meow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meow.png; sourceTree = "<group>"; };
+		6861699C15DEBB6100B42C67 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6861699515DEB42400B42C67 /* AudioToolbox.framework in Frameworks */,
 				6861696515DEAE4900B42C67 /* UIKit.framework in Frameworks */,
 				6861696715DEAE4900B42C67 /* Foundation.framework in Frameworks */,
 				6861696915DEAE4900B42C67 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +73,8 @@
 		6861696315DEAE4900B42C67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6861699C15DEBB6100B42C67 /* CoreMotion.framework */,
+				6861699415DEB42400B42C67 /* AudioToolbox.framework */,
 				6861696415DEAE4900B42C67 /* UIKit.framework */,
 				6861696615DEAE4900B42C67 /* Foundation.framework */,
 				6861696815DEAE4900B42C67 /* CoreGraphics.framework */,
@@ -74,6 +87,8 @@
 			children = (
 				6861697315DEAE4900B42C67 /* AppDelegate.h */,
 				6861697415DEAE4900B42C67 /* AppDelegate.m */,
+				6861698F15DEB05E00B42C67 /* MeowViewController.h */,
+				6861699015DEB05E00B42C67 /* MeowViewController.m */,
 				6861696B15DEAE4900B42C67 /* Supporting Files */,
 			);
 			path = Meow;
@@ -82,6 +97,8 @@
 		6861696B15DEAE4900B42C67 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6861699A15DEB72800B42C67 /* meow.png */,
+				6861699615DEB59200B42C67 /* meow.wav */,
 				6861696C15DEAE4900B42C67 /* Meow-Info.plist */,
 				6861696D15DEAE4900B42C67 /* InfoPlist.strings */,
 				6861697015DEAE4900B42C67 /* main.m */,
@@ -142,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6861696F15DEAE4900B42C67 /* InfoPlist.strings in Resources */,
+				6861699715DEB59200B42C67 /* meow.wav in Resources */,
+				6861699B15DEB72800B42C67 /* meow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6861699115DEB0B900B42C67 /* MeowViewController.m in Sources */,
 				6861697115DEAE4900B42C67 /* main.m in Sources */,
 				6861697515DEAE4900B42C67 /* AppDelegate.m in Sources */,
 			);
@@ -226,7 +246,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Meow/Meow-Prefix.pch";
 				INFOPLIST_FILE = "Meow/Meow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -237,7 +259,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Meow/Meow-Prefix.pch";
 				INFOPLIST_FILE = "Meow/Meow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
