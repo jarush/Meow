@@ -7,33 +7,57 @@
 //
 
 #import "MeowViewController.h"
+#import "RubGestureRecgonizer.h"
 
 @implementation MeowViewController
 
 - (id)init {
     self = [super init];
     if (self) {
-        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"meow" ofType:@"wav"]];
+        NSURL *url;
+        
+        url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"meow" ofType:@"wav"]];
         AudioServicesCreateSystemSoundID((CFURLRef)url, &meowSound);
+
+        url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"purr" ofType:@"wav"]];
+        AudioServicesCreateSystemSoundID((CFURLRef)url, &purrSound);
     }
     return self;
 }
 
 - (void)dealloc {
     AudioServicesDisposeSystemSoundID(meowSound);
+    AudioServicesDisposeSystemSoundID(purrSound);
     [super dealloc];
 }
 
 - (void)viewDidLoad {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"meow"] forState:UIControlStateNormal];
-    button.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:button];
+    UIImage *image = [UIImage imageNamed:@"meow"];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.userInteractionEnabled = YES;
+
+    UITapGestureRecognizer *tapGestureRecgonizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tapGestureRecgonizer.numberOfTapsRequired = 1;
+    [imageView addGestureRecognizer:tapGestureRecgonizer];
+    [tapGestureRecgonizer release];
+
+    
+    RubGestureRecgonizer *rubGestureRecgonizer = [[RubGestureRecgonizer alloc] initWithTarget:self action:@selector(handleRub:)];
+    [imageView addGestureRecognizer:rubGestureRecgonizer];
+    [rubGestureRecgonizer release];
+
+    [self.view addSubview:imageView];
 }
 
-- (void)buttonPressed:(id)sender {
+- (void)handleTap:(UIGestureRecognizer *)sender {
+    NSLog(@"Tap");
     AudioServicesPlaySystemSound(meowSound);
+}
+
+- (void)handleRub:(UIGestureRecognizer *)sender {
+    NSLog(@"Rub");
+    AudioServicesPlaySystemSound(purrSound);
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		684CC53415DF368800B973C9 /* RubGestureRecgonizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CC53315DF368800B973C9 /* RubGestureRecgonizer.m */; };
+		684CC53715DF3AEB00B973C9 /* purr.wav in Resources */ = {isa = PBXBuildFile; fileRef = 684CC53615DF3AEB00B973C9 /* purr.wav */; };
 		6861696515DEAE4900B42C67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861696415DEAE4900B42C67 /* UIKit.framework */; };
 		6861696715DEAE4900B42C67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861696615DEAE4900B42C67 /* Foundation.framework */; };
 		6861696915DEAE4900B42C67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861696815DEAE4900B42C67 /* CoreGraphics.framework */; };
@@ -20,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		684CC53215DF368800B973C9 /* RubGestureRecgonizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubGestureRecgonizer.h; sourceTree = "<group>"; };
+		684CC53315DF368800B973C9 /* RubGestureRecgonizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubGestureRecgonizer.m; sourceTree = "<group>"; };
+		684CC53615DF3AEB00B973C9 /* purr.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = purr.wav; sourceTree = "<group>"; };
 		6861696015DEAE4900B42C67 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6861696415DEAE4900B42C67 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6861696615DEAE4900B42C67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +94,8 @@
 				6861697415DEAE4900B42C67 /* AppDelegate.m */,
 				6861698F15DEB05E00B42C67 /* MeowViewController.h */,
 				6861699015DEB05E00B42C67 /* MeowViewController.m */,
+				684CC53215DF368800B973C9 /* RubGestureRecgonizer.h */,
+				684CC53315DF368800B973C9 /* RubGestureRecgonizer.m */,
 				6861696B15DEAE4900B42C67 /* Supporting Files */,
 			);
 			path = Meow;
@@ -97,12 +104,13 @@
 		6861696B15DEAE4900B42C67 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6861699A15DEB72800B42C67 /* meow.png */,
-				6861699615DEB59200B42C67 /* meow.wav */,
-				6861696C15DEAE4900B42C67 /* Meow-Info.plist */,
 				6861696D15DEAE4900B42C67 /* InfoPlist.strings */,
 				6861697015DEAE4900B42C67 /* main.m */,
+				6861696C15DEAE4900B42C67 /* Meow-Info.plist */,
 				6861697215DEAE4900B42C67 /* Meow-Prefix.pch */,
+				6861699A15DEB72800B42C67 /* meow.png */,
+				6861699615DEB59200B42C67 /* meow.wav */,
+				684CC53615DF3AEB00B973C9 /* purr.wav */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				6861696F15DEAE4900B42C67 /* InfoPlist.strings in Resources */,
 				6861699715DEB59200B42C67 /* meow.wav in Resources */,
 				6861699B15DEB72800B42C67 /* meow.png in Resources */,
+				684CC53715DF3AEB00B973C9 /* purr.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 				6861699115DEB0B900B42C67 /* MeowViewController.m in Sources */,
 				6861697115DEAE4900B42C67 /* main.m in Sources */,
 				6861697515DEAE4900B42C67 /* AppDelegate.m in Sources */,
+				684CC53415DF368800B973C9 /* RubGestureRecgonizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +295,7 @@
 				6861697A15DEAE4900B42C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
