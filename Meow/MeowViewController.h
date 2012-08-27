@@ -12,6 +12,7 @@
 @interface MeowViewController : UIViewController {
     SystemSoundID meowSound;
     SystemSoundID purrSound;
+    SystemSoundID angrySound;
 }
 
 @end

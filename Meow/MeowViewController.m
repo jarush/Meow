@@ -18,9 +18,12 @@
         
         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"meow" ofType:@"wav"]];
         AudioServicesCreateSystemSoundID((CFURLRef)url, &meowSound);
-
+        
         url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"purr" ofType:@"wav"]];
         AudioServicesCreateSystemSoundID((CFURLRef)url, &purrSound);
+        
+        url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"angry" ofType:@"wav"]];
+        AudioServicesCreateSystemSoundID((CFURLRef)url, &angrySound);
     }
     return self;
 }
@@ -28,6 +31,7 @@
 - (void)dealloc {
     AudioServicesDisposeSystemSoundID(meowSound);
     AudioServicesDisposeSystemSoundID(purrSound);
+    AudioServicesDisposeSystemSoundID(angrySound);
     [super dealloc];
 }
 
@@ -42,12 +46,17 @@
     [imageView addGestureRecognizer:tapGestureRecgonizer];
     [tapGestureRecgonizer release];
 
-    
     RubGestureRecgonizer *rubGestureRecgonizer = [[RubGestureRecgonizer alloc] initWithTarget:self action:@selector(handleRub:)];
     [imageView addGestureRecognizer:rubGestureRecgonizer];
     [rubGestureRecgonizer release];
 
     [self.view addSubview:imageView];
+    
+    [self becomeFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
 }
 
 - (void)handleTap:(UIGestureRecognizer *)sender {
@@ -58,6 +67,11 @@
 - (void)handleRub:(UIGestureRecognizer *)sender {
     NSLog(@"Rub");
     AudioServicesPlaySystemSound(purrSound);
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    NSLog(@"motionBegan");
+    AudioServicesPlaySystemSound(angrySound);
 }
 
 @end

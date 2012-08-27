@@ -11,6 +11,7 @@
 		684CC53715DF3AEB00B973C9 /* purr.wav in Resources */ = {isa = PBXBuildFile; fileRef = 684CC53615DF3AEB00B973C9 /* purr.wav */; };
 		684CC53B15DF3BEE00B973C9 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684CC53A15DF3BEE00B973C9 /* icon@2x.png */; };
 		684CC53D15DF3C4500B973C9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 684CC53C15DF3C4500B973C9 /* icon.png */; };
+		684FA8A115EBC3D400F90506 /* angry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 684FA8A015EBC3D400F90506 /* angry.wav */; };
 		6861696515DEAE4900B42C67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861696415DEAE4900B42C67 /* UIKit.framework */; };
 		6861696715DEAE4900B42C67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861696615DEAE4900B42C67 /* Foundation.framework */; };
 		6861696915DEAE4900B42C67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6861696815DEAE4900B42C67 /* CoreGraphics.framework */; };
@@ -29,6 +30,7 @@
 		684CC53615DF3AEB00B973C9 /* purr.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = purr.wav; sourceTree = "<group>"; };
 		684CC53A15DF3BEE00B973C9 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		684CC53C15DF3C4500B973C9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		684FA8A015EBC3D400F90506 /* angry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = angry.wav; sourceTree = "<group>"; };
 		6861696015DEAE4900B42C67 /* Meow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6861696415DEAE4900B42C67 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6861696615DEAE4900B42C67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				6861699A15DEB72800B42C67 /* meow.png */,
 				6861699615DEB59200B42C67 /* meow.wav */,
 				684CC53615DF3AEB00B973C9 /* purr.wav */,
+				684FA8A015EBC3D400F90506 /* angry.wav */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				684CC53715DF3AEB00B973C9 /* purr.wav in Resources */,
 				684CC53B15DF3BEE00B973C9 /* icon@2x.png in Resources */,
 				684CC53D15DF3C4500B973C9 /* icon.png in Resources */,
+				684FA8A115EBC3D400F90506 /* angry.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
